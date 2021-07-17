@@ -1,16 +1,3 @@
-// fetch('http://localhost:3000/weather?address=Poznan')
-//     .then((response)=> {
-//         response.json()
-//         .then((data) => {
-//             if(!data){
-//                 console.log('Jakiś error chuj wie co')
-//             } else(
-//                 console.log(data.forecast),
-//                 console.log(data.location)
-//             )
-//         })
-//     })
-
 const weatherForm = document.querySelector('form')
 const searchElement = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
@@ -24,7 +11,7 @@ weatherForm.addEventListener('submit', (e) => {
     
     const location = decodeURIComponent(searchElement.value) 
     
-    fetch(`http://localhost:3000/weather?address=${location}`)
+    fetch(`/weather?address=${location}`)
     .then((response)=> {
         response.json()
         .then((data) => {
