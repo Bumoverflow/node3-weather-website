@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Unable to find location', undefined)
         } else {
-            callback(undefined, `Jutro ma być ${body.forecast[Object.keys(body.forecast)[0]].avgtemp} stopni Celsjusza`)
+            callback(undefined, `Jutro ma być ${body.forecast[Object.keys(body.forecast)[0]].avgtemp} stopni Celsjusza. Maksymalna jutrzejsza temperatura to ${body.forecast[Object.keys(body.forecast)[0]].maxtemp} stopni Celsjusza`)
         }
     
     })
